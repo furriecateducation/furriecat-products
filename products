@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Furriecat Education Shop</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#fff9fc;
+display:flex;
+justify-content:center;
+min-height:100vh;
+}
+
+/* กล่องหลัก */
+.container{
+width:90%;
+max-width:420px;
+margin:40px auto;
+}
+
+/* หัวเว็บ */
+h1{
+text-align:center;
+color:#eea9fc;
+}
+
+/* ===== CARD สินค้า ===== */
+.product-card{
+background:#ffffff;
+border-radius:20px;
+padding:20px;
+box-shadow:0 10px 25px rgba(255,150,200,0.25);
+text-align:center;
+}
+
+/* รูปสินค้า */
+.product-card img{
+width:100%;
+border-radius:15px;
+}
+
+/* ชื่อสินค้า */
+.product-title{
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
+color:#ff7ab6;
+}
+
+/* ราคา */
+.price{
+font-size:18px;
+margin:10px 0;
+color:#65d0ff;
+font-weight:bold;
+}
+
+/* ปุ่ม */
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#f2ffd9;
+color:#7cc400;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* ===== DETAIL PAGE ===== */
+.detail{
+display:none;
+}
+
+.back-btn{
+margin-bottom:15px;
+background:#ffe6f2;
+color:#ff7ab6;
+}
+
+.description{
+background:#fff;
+padding:15px;
+border-radius:12px;
+margin:15px 0;
+line-height:1.6;
+}
+
+.buy-btn{
+background:#fffea9;
+color:#3c3c3c;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📚 Furriecat Education</h1>
+
+<!-- ================= LIST PAGE ================= -->
+<div id="shop">
+
+<div class="product-card">
+
+<img src="https://via.placeholder.com/400x300">
+
+<div class="product-title">
+GED Preparation Book
+</div>
+
+<div class="price">
+฿390
+</div>
+
+<button onclick="openDetail()">
+View Details
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ================= DETAIL PAGE ================= -->
+<div id="detail" class="detail">
+
+<button class="back-btn" onclick="backShop()">
+← Back
+</button>
+
+<div class="product-card">
+
+<img src="https://via.placeholder.com/400x300">
+
+<div class="product-title">
+GED Preparation Book
+</div>
+
+<div class="price">
+฿390
+</div>
+
+<div class="description">
+หนังสือสรุป GED ครบ 4 วิชา  
+✔ Math  
+✔ RLA  
+✔ Social Studies  
+✔ Science  
+
+เหมาะสำหรับผู้เตรียมสอบ GED  
+อ่านง่าย เข้าใจเร็ว พร้อมแนวข้อสอบจริง
+</div>
+
+<button class="buy-btn"
+onclick="window.open('https://lin.ee/ELHcIH2')">
+CONTACT TO BUY
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openDetail(){
+document.getElementById("shop").style.display="none";
+document.getElementById("detail").style.display="block";
+window.scrollTo(0,0);
+}
+
+function backShop(){
+document.getElementById("detail").style.display="none";
+document.getElementById("shop").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
